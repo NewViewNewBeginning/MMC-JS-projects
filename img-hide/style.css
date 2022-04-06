@@ -4,27 +4,32 @@
     box-sizing: border-box;
 }
 
+body {
+    background: rgb(46, 39, 39);
+}
+
 .item {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     background-size: cover;
+    max-width: 1000px;
     transition: 0.6s;
 }
 .item1 {
-    height: 40px;
+    height: 60px;
     
     background-image: url('./img/grindelwald-1330662_1920.jpg');
 }
 .item2 {
-    height: 300px;
+    height: 400px;
     
     background-image: url('./img/mountains-190055_1280.jpg');
 }
 
 .hide {
-    height: 300px;
+    height: 400px;
 }
 
 .background {
