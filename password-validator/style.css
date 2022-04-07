@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+	background-color: rgb(37, 24, 24);
+	color: rgb(243, 244, 245);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	letter-spacing: 0.8px;
+}
+label,
+input,
+h3,
+p, li {
+	margin: 15px;
+}
+h3{
+    font-weight: 600;
+}
+input {
+	height: 35px;
+	width: 250px;
+	font-size: 20px;
+    text-align: center;
+}
