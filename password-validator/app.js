@@ -5,7 +5,6 @@ const numbers = /[0-9]/;
 const special = /[!@#$%^&*()?]/;
 const minValue = 10;
 
-console.log(p, input);
 
 const showMsg = () => {
 	if (
@@ -38,3 +37,4 @@ const checkPassword = () => {
 }
 
 input.addEventListener("keyup", checkPassword);
+
