@@ -31,6 +31,7 @@ nav a {
 nav a:hover {
 	font-weight: bold;
 }
+
 .burger {
 	position: absolute;
 	top: 0;
