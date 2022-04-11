@@ -19,4 +19,13 @@ Temperature converter with option to change between C to F and F to C, not accep
 
 5. ----Burger menu-----
 
+    Basic burger menu for mobile with no icon animations just sliding menu from side and changing icon for open and closed menu.
+
+6. ----Random fact and current day display----
+
+1 function picking up 1 index from array to be display ona a page. math random method used to pick index number which represents each fackt from array
+
+7. --- To Do List ---
+
+
 
