@@ -18,7 +18,8 @@ const change = () => {
 };
 
 const convert = () => {
-    if(result.textContent === 0) return
+	if (converter.value === "")
+		return (result.textContent = "Type in number first!");
 	if (one.textContent === "°C") {
 		const fahr = Number(converter.value) * 1.8 + 32;
 		result.textContent = `${fahr.toFixed(2)} °F`;
