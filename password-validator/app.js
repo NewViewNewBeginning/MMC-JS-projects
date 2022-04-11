@@ -38,3 +38,4 @@ const checkPassword = () => {
 
 input.addEventListener("keyup", checkPassword);
 
+input.addEventListener('touchend', checkPassword)

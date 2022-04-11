@@ -13,3 +13,7 @@ Font color changer button picking randomly picked number from Math.random and ad
 
 Simple password validator which chcecking if password inlude special char, numbers and letters. Checking happening when something is typed in otherwise default message appear.
     
+4. ----Celsius to Fahrenheit Converter----
+
+Temperature converter with option to change between C to F and F to C, not accepting empty values or letters. 
+
