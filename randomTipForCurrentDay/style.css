@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rebeccapurple;
+    color: azure;
+}
+
+.box {
+    width: 50%;
+    background-color: rgb(212, 59, 59) ;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+p{
+    padding: 10px;
+}

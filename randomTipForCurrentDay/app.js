@@ -11,6 +11,11 @@ const facts = [
 ];
 
 let day = new Date();
-let weekday = day.toLocaleString("en", { weekday: "long" });
+currentDay.textContent = day.toLocaleString("en", { weekday: "long" });
 
-currentDay.textContent = weekday;
+const showRandomMsg = () => { 
+    let msg = Math.floor(Math.random() * facts.length)
+    funFact.textContent = facts[msg]
+ }
+
+ showRandomMsg()
