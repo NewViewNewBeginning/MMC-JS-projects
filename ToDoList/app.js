@@ -17,6 +17,7 @@ const prepareDOMElements = () => {
 	errorInfo = document.querySelector(".error-info");
 	addBtn = document.querySelector(".btn-add");
 	ulList = document.querySelector(".todolist ul");
+
 };
 
 // all events on our elements
@@ -30,6 +31,9 @@ const addNewTodo = () => {
         newTodo = document.createElement('li')
         newTodo.textContent = todoInput.value
         ulList.append(newTodo)
+        todoInput.value = ""
+        errorInfo.textContent = ""
+
         
         
     }else{
