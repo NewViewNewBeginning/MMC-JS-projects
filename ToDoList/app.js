@@ -37,7 +37,7 @@ const prepareDOMEvents = () => {
 	popup.addEventListener("click", checkClick);
 	popupCloseBtn.addEventListener("click", closePopup);
 	popupAddBtn.addEventListener("click", addChange);
-	KeyboardEvent('kyeup', 'Enter')
+	todoInput.addEventListener("keyup", enterKeyCheck);
 };
 
 const addNewTodo = () => {
@@ -65,7 +65,7 @@ const checkClick = e => {
 	} else if (e.target.matches(".edit")) {
 		editTodo(e);
 	} else if (e.target.matches(".delete")) {
-		deleteTodo(e)
+		deleteTodo(e);
 	}
 };
 
@@ -77,27 +77,32 @@ const editTodo = e => {
 };
 const closePopup = () => {
 	popup.style.display = "none";
-	popupInfo.textContent = ""
+	popupInfo.textContent = "";
 };
 const addChange = () => {
 	if (popupInput.value !== "") {
 		todoToEdit.firstChild.textContent = popupInput.value;
 		popup.style.display = "none";
 	} else {
-		popupInfo.textContent = 'You must type in something'
+		popupInfo.textContent = "You must type in something";
 	}
 };
 
-const deleteTodo = (e) => { 
-	e.target.closest("li").remove()
-	
-	const allTodos = ulList.querySelectorAll('li')
-	if(allTodos.length === 0){
-		errorInfo.textContent ='No tasks on the list.';}
-	console.log(allTodos)
- }
+const deleteTodo = e => {
+	e.target.closest("li").remove();
 
- 
+	const allTodos = ulList.querySelectorAll("li");
+	if (allTodos.length === 0) {
+		errorInfo.textContent = "No tasks on the list.";
+	}
+	console.log(allTodos);
+};
+
+const enterKeyCheck = e => {
+	if (e.key === "Enter") {
+		addNewTodo();
+	}
+};
 
 // for reading all content before script run
 document.addEventListener("DOMContentLoaded", main);
