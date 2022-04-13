@@ -37,6 +37,7 @@ const prepareDOMEvents = () => {
 	popup.addEventListener("click", checkClick);
 	popupCloseBtn.addEventListener("click", closePopup);
 	popupAddBtn.addEventListener("click", addChange);
+	KeyboardEvent('kyeup', 'Enter')
 };
 
 const addNewTodo = () => {
@@ -64,6 +65,7 @@ const checkClick = e => {
 	} else if (e.target.matches(".edit")) {
 		editTodo(e);
 	} else if (e.target.matches(".delete")) {
+		deleteTodo(e)
 	}
 };
 
@@ -85,6 +87,17 @@ const addChange = () => {
 		popupInfo.textContent = 'You must type in something'
 	}
 };
+
+const deleteTodo = (e) => { 
+	e.target.closest("li").remove()
+	
+	const allTodos = ulList.querySelectorAll('li')
+	if(allTodos.length === 0){
+		errorInfo.textContent ='No tasks on the list.';}
+	console.log(allTodos)
+ }
+
+ 
 
 // for reading all content before script run
 document.addEventListener("DOMContentLoaded", main);
