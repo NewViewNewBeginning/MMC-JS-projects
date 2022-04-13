@@ -36,6 +36,7 @@ const prepareDOMEvents = () => {
 	ulList.addEventListener("click", checkClick);
 	popup.addEventListener("click", checkClick);
 	popupCloseBtn.addEventListener("click", closePopup);
+	popupAddBtn.addEventListener("click", addChange);
 };
 
 const addNewTodo = () => {
@@ -61,16 +62,28 @@ const checkClick = e => {
 		e.target.closest("li").classList.toggle("completed");
 		e.target.classList.toggle("completed");
 	} else if (e.target.matches(".edit")) {
-		editTodo();
+		editTodo(e);
 	} else if (e.target.matches(".delete")) {
 	}
 };
 
-const editTodo = () => {
+const editTodo = e => {
+	todoToEdit = e.target.closest("li");
+	popupInput.value = todoToEdit.firstChild.textContent;
+
 	popup.style.display = "flex";
 };
 const closePopup = () => {
 	popup.style.display = "none";
+	popupInfo.textContent = ""
+};
+const addChange = () => {
+	if (popupInput.value !== "") {
+		todoToEdit.firstChild.textContent = popupInput.value;
+		popup.style.display = "none";
+	} else {
+		popupInfo.textContent = 'You must type in something'
+	}
 };
 
 // for reading all content before script run
