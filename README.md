@@ -27,5 +27,11 @@ Temperature converter with option to change between C to F and F to C, not accep
 
 7. --- To Do List ---
 
+global variables and 2 main functions.
+
+--prepareDOMElements ---for queryselectors
+--prepareDOMEvents  --- for all events created in app
+
+Function called --Main-- runs them for action together
 
 
